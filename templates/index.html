@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{{ title }}</title>
+        <div id="header">
+            <h>{{ title }}</h>
+            <h2>An addition to your thesaurus.</h2>
+        </div>
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}"/>
+    </head>
+
+    <body>
+        <img alt="full screen background image" src="/static/dog.jpg" id="full-screen-background-image" />
+        <div id=box>
+            <h1>What's on the tip of your tongue?</h1>
+            <form action='.' method="POST">
+                <input type="text" name="text">
+                <input type="submit" value="Go" />
+            </form>
+            <div id=slider>
+                <p1>Need some help?</p1>
+            </div>
+            <div id=open>
+                <h3>So what exactly do you do?</h3>
+                <p>If you have ever written an essay or a paper for college, sometimes you come across a word that you can not seem to remember.</p>
+                <p>You know the sentence up to the point of the word that's on the "tip
+                of your tongue," but you can not continue your thought without that word you need. </p>
+                <p>By using this tool, you should write the sentence up until the point of the missing word.
+                I will analyze your sentence and return others similar to the one you entered,
+                hopefully ending up with the word you were looking for, or at least generating something
+                that can spark some thoughts to get you closer to the word that is on the tip of your tongue.</p>
+                <p>But please, do not expect magic! Maybe it's not the exact word you are
+                looking for, but it will sure help you in your process of finding it.</p>
+                <div id=tips>
+                    <h3>Tips</h3>
+                    <li>Avoid using simple sentences, such as "the dog __." Imagine how many words could come after it. But if you can't avoid it, try it and see what comes up: maybe something helps.</li>
+                    <li>I have noticed that sentences over 7 words do not return the largest amount of results as they vary in complexity and personalized writing styles.</li>
+                    <li>So, keep your sentence somewhere between 3 and 7 words if possible. You can do this by parsing your own sentence into phrases.</li>
+                    <li>Keep punctuation</li>
+                    <li>I'm working on making the word be selected in the middle, such as "the dog __ the cat." But that will come soon, not quite yet.</li>
+                </div>
+                <pt>[X]Close</pt>
+            </div>
+        </div>
+        <script>
+        $(document).ready(function() {
+            hide();
+        });
+        </script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+        <script type=text/javascript src="{{url_for('static', filename='hide.js') }}"></script>
+    </body>
+</html>

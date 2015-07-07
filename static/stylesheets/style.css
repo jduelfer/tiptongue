@@ -1,0 +1,205 @@
+<style type="text/css">
+
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  left: 0;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+#menu {
+    cursor:pointer;
+    left:0px;
+    top:100px;
+    position: fixed;
+    width: 285px;
+    height: 100px;
+    text-align:center;
+}
+
+#slider, #open {
+    padding:5px;
+    text-align:center;   
+}
+
+#open {
+    padding: 50px;
+    display: none;
+    background-color:white;
+}
+
+#full-screen-background-image {
+  z-index: -999;
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#wrapper {
+  position: relative;
+  width: 800px;
+  min-height: 400px;
+  margin: 100px auto;
+  color: #333;
+}
+
+h {
+    padding-top:200px;
+    font-size:40px;
+    font-family: American Typewriter;
+}
+
+h1 {
+    padding-top:40px;
+    font-size:10px;
+    font-weight: normal;
+    font-family: American Typewriter;
+}
+
+h2 {
+    font-weight: 700;
+    font-size:10px;
+    font-family: American Typewriter;
+}
+
+h3 {
+    font-weight:500;
+    font-size:20px;
+    font-family: American Typewriter;
+}
+
+p1 {
+    cursor:pointer;
+    font-family: American Typewriter;
+    font-size:12px;
+}
+
+p {
+    font-family: American Typewriter;
+    font-size:10px;
+}
+
+pt {
+    cursor: pointer;
+    padding-top:20px;
+    }
+
+#box
+{
+    width:450px;
+    height:350px;
+    text-align:center;
+    /***background-image:url("jap.jpg");**/
+    background-repeat:no-repeat;
+    margin: 20px auto auto;
+    padding: 40px 0;
+}
+
+#box2
+{
+    width:600px;
+    height:600px;
+    text-align:center;
+    margin: auto auto auto;
+}
+
+
+blockquote
+{
+    font-family:American Typewriter;
+    text-size:10px;
+}
+
+#header
+{
+    text-align:center;
+    margin-top:60px;
+}
+
+#tips {
+    text-align:center;
+}
+
+li {
+    font-family: American Typewriter;
+    font-size: 10px;
+}
+
+
+/*******************
+This is the css for the display page
+*******************/
+
+#container {
+    width: 900px;
+    margin: auto;
+    }
+
+#bar {
+    width: 900px;
+    text-align: center;
+    font-family: American Typewriter;
+    float: top;
+    }
+    
+#results {
+    width: 300px;
+    text-align: left;
+    font-family: American Typewriter;
+    float:left;
+}
+
+h4 {
+    font-family: American Typewriter;
+    font-size:15px;
+    font-weight: normal;
+    }
+
+#best {
+    width: 200px;
+    text-align: left;
+    font-family: American Typewriter;
+    float: left;
+    }
+    
+#best2 {
+    width: 200px;
+    text-align: left;
+    font-family: American Typewriter;
+    float: left;
+    }
+
+#alphabetical {
+    width: 200px;
+    text-align: left;
+    font-family: American Typewriter;
+    float: left;
+    }
+
+p2 {
+    font-family: American Typewriter;
+    font-size:10px;
+    text-decoration:underline;
+    }
+
+p3 {
+    font-family: American Typewriter;
+    font-size:15px;
+    }
+
+#choice {
+    width: 200px;
+    text-align: left;
+    font-family: American Typewriter;
+    text-decoration: underline;
+    }
+    
+
+</style>

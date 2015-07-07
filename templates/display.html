@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Results</title>
+        <div id=header>
+            <h3>Results for:</h3>
+            <h4>{{ tagged }}</h4>
+        </div>
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}"/>
+    </head>
+    <body>
+        <div id=container>
+            <div id=bar>
+                <div id=slider>
+                    <p1>Want help with understanding the findings?</p1>
+                </div>
+                <div id=open>
+                    <p3>Each column below represents a different form of the data retrived from your input.</p3>
+                    <p3>On the left, is the actual sentences used.</p3>
+                    <p3>Second from the left is the most common occurences. These can me scanned at first,
+                    if the word you are looking for is very simple, and almost always used in that context. The numbers represent frequencies</p3>
+                    <p3>If this is not the case, the third row from the left will be your most important resource.
+                    These represent the most uncommon words in your search context, which is usually where you want to look
+                    if the word you are thinking of is more complicated than something like "is."</p3>
+                    <p3>Lastly, the words on the right are the same in the previous columns, but ordered in alphabetical order.
+                    So, if you can remember the first letter of the word, this may serve you a great purpose.</p3>
+                    <p3>Good luck on your quest to find that word on the tip of your tongue.</p3>
+                    <pt>[X]Close</pt>
+                </div>
+            </div>
+            <div id=results>
+                <p2>Similar sentences</p2>
+                {% for line in joined %}
+                    <li> {{ line }} </li>
+                {% endfor %}
+            </div>
+            <div id=best>
+                <p2>Most common findings</p2>
+                {% for freq in organized_freqs %}
+                    <li> {{ freq }} </li>
+                {% endfor %}
+            </div>
+            <div id=best2>
+                <p2>Least common findings</p2>
+                {% for freq in revers %}
+                    <li> {{ freq }} </li>
+                {% endfor %}
+            </div>
+            <div id=alphabetical>
+                <p2>Findings in alphabetical order</p2>
+                {% for a in az %}
+                    <li> {{ a }} </li>
+                {% endfor %}
+            </div>
+        </div>
+        <script>
+        $(document).ready(function() {
+            hide();
+        });
+        </script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+        <script type=text/javascript src="{{url_for('static', filename='hide.js') }}"></script>
+    </body>
+</html>
