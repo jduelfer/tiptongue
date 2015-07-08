@@ -22,12 +22,13 @@ def handle_input():
     revers = organized_freqs[:]
     revers.reverse()
     az = ling.alpha_freqs(organized_freqs)
-    return render_template('display.html', tagged=tagged, processed_text=processed_text, results=results, organized_freqs=organized_freqs, joined=joined, revers=revers, az=az)
+    ##return render_template('display.html', tagged=tagged, processed_text=processed_text, results=results, organized_freqs=organized_freqs, joined=joined, revers=revers, az=az)
+    return display(tagged, processed_text, results, organized_freqs, joined, revers, az)
     
 
 @app.route('/display/')
-def display():
-    return render_template('display.html')
+def display(tagged, processed_text, results, organized_freqs, joined, revers, az):
+    return render_template('display.html', tagged=tagged, processed_text=processed_text, results=results, organized_freqs=organized_freqs, joined=joined, revers=revers, az=az)
 
 
 if __name__ == "__main__":
