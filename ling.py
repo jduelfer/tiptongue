@@ -70,6 +70,7 @@ with open('leaves.txt', 'rb') as f:
 def tag_input(sentence):
     mystr = sentence
     tok = re.sub("[^\w]", " ", mystr).split()
+    nltk.download('punkt')
     tagged_input = nltk.pos_tag(tok)
     simplified_tags = [(word, map_tag('en-ptb','universal', tag)) for word, tag in tagged_input]
     return simplified_tags
