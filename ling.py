@@ -68,7 +68,8 @@ with open('leaves.txt', 'rb') as f:
 #this is prediction part
 
 def tag_input(sentence):
-    tok = nltk.word_tokenize(sentence)
+    mystr = sentence
+    tok = re.sub("[^\w]", " ", mystr).split()
     tagged_input = nltk.pos_tag(tok)
     simplified_tags = [(word, map_tag('en-ptb','universal', tag)) for word, tag in tagged_input]
     return simplified_tags
