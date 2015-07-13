@@ -3,6 +3,7 @@ import os
 import ling
 import logging
 import sys
+import nltk
 
 root = logging.getLogger()
 root.setLevel(logging.DEBUG)
