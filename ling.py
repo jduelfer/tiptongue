@@ -6,6 +6,8 @@ from nltk.corpus import gutenberg
 import pickle
 import re
 
+nltk.data.path.append('/Users/duelfer/tiptongue/nltk_data')
+
 #tagged = nltk.corpus.brown.tagged_words(tagset='universal')
 
 ##############DON'T NEED THIS BUSINESS###############
