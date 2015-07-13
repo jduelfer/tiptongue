@@ -21,11 +21,16 @@ def intro():
     title = "Tip of the Tongue"
     return render_template('index.html', title=title)
 
-@app.route('/', methods=['POST'])
+@app.route('/', methods=['GET','POST'])
 def handle_input():
     text = request.form['text']
     processed_text = text.lower()
-    tagged = ling.tag_input(processed_text)
+    try:
+        tagged = ling.tag_input(processed_text)
+    except LookupError:
+        nltk.download()
+        nltk.download('punkt')
+        tagged = ling.tag_input(processed_text)
     length = len(tagged)
     results = ling.collect_data(tagged, ling.data)
     freqs = ling.count_frequencies(results, length)
